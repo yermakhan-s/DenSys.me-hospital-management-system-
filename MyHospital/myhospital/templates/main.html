@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome page</title>
+</head>
+<style>
+    .buttons {
+        top: 50%;
+        left: 50%;
+    }
+    .button {
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: #5bb5d3;
+    }
+</style>
+<body>
+    <div class = "buttons">
+
+        <a href="{% url 'admin:index' %}">
+        <button class="button">
+            Admin
+        </button>
+        </a>
+        <a href="{% url 'hospitalapp:login' %}">
+        <button class="button">
+            Patient log in
+        </button></a>
+        <a href="{% url 'hospitalapp:login' %}">
+        <button class="button">
+            Doctor log in
+        </button></a>
+    </div>
+</body>
+</html>
