@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 
 class Patient(models.Model):
@@ -16,9 +18,7 @@ class Patient(models.Model):
     optionaldetails=models.CharField(max_length=30)
 
     def __str__(self):
-        return self.birth_date
-    def __str__(self):
-        return self.registrationdate
+        return f"{self.name} {self.surname}"
 
 class Doctor(models.Model):
     birth_date = models.CharField(max_length=30)
@@ -40,6 +40,14 @@ class Doctor(models.Model):
     degree=models.CharField(max_length=30)
     rating=models.CharField(max_length=30)
     def __str__(self):
-        return self.birth_date
+        return f"{self.name} {self.surname} {self.specaliztionID}"
+
+class Appointment(models.Model):
+    name = models.CharField(max_length=30)
+    surname = models.CharField(max_length=30)
+    date = models.DateField(default=datetime.date.today)
+    specalization=models.CharField(max_length=30)
+    doctor =models.ForeignKey(Doctor, on_delete=models.CASCADE)
+    contacts = models.CharField(max_length=100)
 
 
