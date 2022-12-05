@@ -49,5 +49,8 @@ class Appointment(models.Model):
     specalization=models.CharField(max_length=30)
     doctor =models.ForeignKey(Doctor, on_delete=models.CASCADE)
     contacts = models.CharField(max_length=100)
+    status = models.CharField(max_length=30, default="Pending")
+    def __str__(self):
+        return f"{self.name} {self.surname} doctor: {self.doctor}"
 
 

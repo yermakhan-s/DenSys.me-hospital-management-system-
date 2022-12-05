@@ -6,5 +6,6 @@ urlpatterns=[
     path("login/", views.log_in_view, name="login"),
     path("appointment/", views.appointment, name="appointment"),
     path("create_appointment/<int:id>/", views.create_appointment, name="create_appointment"),
-    path("make_appointment/<str:id>/", views.make_appointment, name="make_appointment")
+    path("make_appointment/<str:id>/", views.make_appointment, name="make_appointment"),
+    path("make_appointment_post/", views.make_appointment_post, name="make_appointment_post")
 ]
