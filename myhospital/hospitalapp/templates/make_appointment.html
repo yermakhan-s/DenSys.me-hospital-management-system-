@@ -12,11 +12,10 @@
     {% if doc.count > 0 %}
     <h2>Doctor List</h2>
     <table>
-        <thead><th>Name</th><th>Surname</th><th>Contact_Number</th><th>Price</th><th>Schedule</th><th>Rating</th><th> </th></thead>
+        <thead><th>Doctor</th><th>Contacts</th><th>Price</th><th>Schedule</th><th>Rating</th><th> </th></thead>
         {% for i in doc %}
         <tr>
-            <td>{{ i.name }}</td>
-            <td>{{ i.surname }}</td>
+            <td>{{ i }}</td>
             <td>{{ i.contactnumber }}</td>
             <td>{{ i.priceoftheappointment }}</td>
             <td>{{ i.scheduledetails }}</td>

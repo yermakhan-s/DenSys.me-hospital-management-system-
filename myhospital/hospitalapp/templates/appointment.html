@@ -30,7 +30,7 @@
 
     </div>
     {% if doc.count > 0 %}
-    <h2>Specialisation List</h2>
+    <h2>Specialisation List:</h2>
     <table>
         <thead><th>SpecializationID</th><th></th></thead>
         {% for i in doc %}
@@ -42,12 +42,16 @@
         {% endfor %}
     </table>
     {% endif %}
+    <h2>My appointments:</h2>
     {% if appo.count > 0 %}
-    <h2>My appointments</h2>
+
     <table>
-        <thead><th>Appointment</th><th>Status</th></thead>
+        <thead><th>Patient</th><th></th><th>Doctor</th><th>Status</th></thead>
         {% for i in appo %}
         <tr>
+
+            <td>{{ i.name }}</td>
+            <td>{{ i.surname }}</td>
             <td>{{ i }}</td>
             <td>{{ i.status }}</td>
         </tr>
