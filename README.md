@@ -6,6 +6,6 @@
 # In addition searching system is implemented for the doctor by speciality and name.
 # Patient can seacrh or choose a doctor by a list.
 # After clicking on the doctor user goes to the appointment page and fills out the form.
-# After submitting the appointment user automatically goes back to the seacrhing page and his new appointment is displayed with its status.
+# After submitting the appointment user automatically goes back to the seaкching page and his new appointment is displayed with its status.
 # The username for admin is: admin
 # password:                  admin
